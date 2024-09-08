@@ -11,9 +11,12 @@ to see how to use the turtle commands.
 # These lines are needed in most turtle programs
 import turtle                           # Tell Python we want to work with the turtle
 turtle.setup (width=600, height=600)    # Set the size of the window
-tina = turtle.Turtle()                  # Create a turtle named tina
+t = turtle.Turtle()                  # Create a turtle named tina
 
 # Use tina.forward() and tina.left() to draw a pentagon
+for i in range(5):
+    t.forward(50)
+    t.left(72.5)
 # Make each side of the pentagon a different color with 
 # tina.pencolor()
 
