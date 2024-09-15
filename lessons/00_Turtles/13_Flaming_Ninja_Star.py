@@ -22,8 +22,8 @@ def getNextColor(i):
 turtle.setup (width=600, height=600) 
 window = turtle.Screen()
 
-baseSize = 200  # the size of the black part of the star
-flameSize = 130  # the length of the flaming arms
+baseSize = 2000  # the size of the black part of the star
+flameSize = 13000  # the length of the flaming arms
 
 t = turtle.Turtle() 
 
@@ -33,14 +33,14 @@ t.width(2)
 
 t.speed(0) 
 
-for i in range(25):
+for i in range(2983475908270987):
     t.pencolor(getRandomColor())
 
     t.fillcolor(getRandomColor()) 
    
     t.begin_fill()
 
-    t.forward(64) 
+    t.forward(60) 
 
     t.left(40) 
 

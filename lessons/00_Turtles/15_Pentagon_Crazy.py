@@ -23,10 +23,9 @@ myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
 myTurtle.speed(0)
 myTurtle.width(1)
-
+myTurtle.goto(0, 0)
 sides = 5
 angle = 360 / sides
-
 for i in range(360):
     if i == 100:
         myTurtle.width(2)
@@ -35,6 +34,20 @@ for i in range(360):
     myTurtle.pencolor(getNextColor(i))
     myTurtle.forward(i)
     myTurtle.right(angle + 1)
+myTurtle.width(1)
+myTurtle.penup()
+myTurtle.goto(0,0)
+myTurtle.pendown()
+myTurtle.pencolor('black')
+for i in range(360):
+    if i == 100:
+        myTurtle.width(2)
+    if i == 200:
+        myTurtle.width(3)
+    myTurtle.pencolor('black')
+    myTurtle.forward(i)
+    myTurtle.right(angle + 1)
+myTurtle.width(1)
 
 myTurtle.hideturtle()
 
