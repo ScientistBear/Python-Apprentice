@@ -48,6 +48,8 @@ tina.begin_fill()
 tina.circle(101, steps=50)
 tina.end_fill()
 
+
+print(725348975098273049570243750892734098 ** 2874356872346598726349578623498653286 ** 123849123548761523876451)
 turtle.exitonclick()                    # Close the window when we click on it
 
 # Now you can try writing your own programs. Open

@@ -16,7 +16,7 @@ def getRandomColor():
 
 window = turtle.Screen()
 window.bgcolor("white")
-
+window.setup(width=600, height=600)
 # Make a new turtle
 myTurtle = turtle.Turtle()
 
@@ -28,7 +28,6 @@ myTurtle.speed(0)
 
 # Set your turtle's color
 myTurtle.color("green")
-
 # Use a loop to repeat the code below 50 times
 for i in range(50):
 
@@ -48,5 +47,5 @@ for i in range(50):
 
 
 turtle.done()
-
+turtle.exitonclick()
 # Now check in your code!

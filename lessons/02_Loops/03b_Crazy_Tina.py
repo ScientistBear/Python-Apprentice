@@ -13,29 +13,47 @@ more help
 """
 
 
-import turtle                           # Tell Python we want to work with the turtle
+import turtle, random                           # Tell Python we want to work with the turtle
 turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.speed(0)                           # Make the turtle move as fast, but not too fast. 
 
+tina.goto(0,0)
 
-forwards = [ ... ]
-lefts = [ ... ]
-colors = [  ... ]
+colors = [ 'red', 'orange', 'yellow', 'green', 'blue', 'purple' ]
 
-for  i in range(8):
+for  i in range(1000):
 
-    forward = ...
-    left = ...
-    color = ...
+    forward = random.randint(-100, 100)
+    left = random.randint(-359, 359)
+    color = colors[random.randint(0,5)]
 
 
     tina.color(color)
     tina.forward(forward)
     tina.left(left)
-
+    if i == 100:
+        tina.goto(0,0)
+    elif i == 200:
+        tina.goto(0,0)
+    elif i == 300:
+        tina.goto(0,0)
+    elif i == 400:
+        tina.goto(0,0)
+    elif i == 500:
+        tina.goto(0,0)
+    elif i == 600:
+        tina.goto(0,0)
+    elif i == 700:
+        tina.goto(0,0)
+    elif i == 800:
+        tina.goto(0,0)
+    elif i == 900:
+        tina.goto(0,0)
+    elif i == 1000:
+        tina.goto(0,0)
 turtle.exitonclick()  
 
