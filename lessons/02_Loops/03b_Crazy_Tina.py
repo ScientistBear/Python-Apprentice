@@ -25,16 +25,15 @@ tina.goto(0,0)
 
 colors = [ 'red', 'orange', 'yellow', 'green', 'blue', 'purple' ]
 
-for  i in range(1000):
+for  i in range(100000):
 
     forward = random.randint(-100, 100)
-    left = random.randint(-359, 359)
+    left = random.randint(-100, 100)
     color = colors[random.randint(0,5)]
 
 
     tina.color(color)
-    tina.forward(forward)
-    tina.left(left)
+    tina.goto(forward, left)
     if i == 100:
         tina.goto(0,0)
     elif i == 200:
