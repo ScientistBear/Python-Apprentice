@@ -46,22 +46,29 @@ def ask_integer(prompt):
 
 
 # Pick the random number
-rn = random.randint(1,10)
+rn = random.randint(1,4)
 a = 0
 # In your loop:
 while True:
     # Get the user's guess
     n = int(input())
-    a + 1
+    
     # If the user's guess is divisible by 7, tell the user to start over
     
     if n < rn:
         input('too low bozo')
+        a + 1
+        
     elif n > rn:
         input('too high bozo')
+        a + 1
+        
     else:
+        a + 1
+        
         break
-print('took you attemps')
+        
+print(f"took you  attemps lol")
     # If the user's guess is too high, tell the user
     # If the user's guess is too low, tell the user
     # If the user's guess is correct, tell the user and break out of the loop
