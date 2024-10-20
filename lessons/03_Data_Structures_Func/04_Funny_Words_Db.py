@@ -100,12 +100,19 @@ def update_listbox(db):
     # the one below. (For your function, you should set this list to the empty list)
     l = [
     ]
-
+    
+    
     # Add each definition to a string
-    for i in db.values():
-        l.append(i)
+    for i in db.keys():
+        d = db[i]
+        z = i+' : '+d
+        l.append(z)
+
+    
     # iterate over the dict's key-value pairs and turn them into
+
     # strings, then add the strings to the list with .append()
+    
 
     return l
 

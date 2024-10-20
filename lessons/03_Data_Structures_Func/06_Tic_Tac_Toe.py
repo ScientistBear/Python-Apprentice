@@ -6,7 +6,6 @@ O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
-
 def check_row(l):
     """Check if a player won on a row
     Args:
@@ -15,7 +14,8 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-
+    
+        
     return None
 
 def check_win(board):
