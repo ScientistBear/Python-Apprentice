@@ -7,6 +7,12 @@ O_MARK = "O"
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
 def check_row(l):
+    print('hi')
+    for row in l:
+        if row[0] == row[1] == row[2]:
+            if row[0] != '':
+                return row[0]
+
     """Check if a player won on a row
     Args:
         l: a 3 element iterable
@@ -19,6 +25,10 @@ def check_row(l):
     return None
 
 def check_win(board):
+    winner = check_row(board)
+    transposed = list(zip(*board))
+    if winner == 
+    check_row(transposed)
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
@@ -26,7 +36,7 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-
+    return winner
     return None
 
 # The following code is the main part of the program. It creates a GUI for the
