@@ -1,13 +1,12 @@
-#imports
+# imports
 from guizero import App, Box, PushButton, Text, info
 
 X_MARK = "X"
 O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
-# IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
+# IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"=
 def check_row(l):
-    print('hi')
     for row in l:
         if row[0] == row[1] == row[2]:
             if row[0] != '':
@@ -16,19 +15,20 @@ def check_row(l):
     """Check if a player won on a row
     Args:
         l: a 3 element iterable
-        
+
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-    
-        
+
     return None
 
 def check_win(board):
     winner = check_row(board)
+    if winner != None:
+        return winner
     transposed = list(zip(*board))
-    if winner == 
-    check_row(transposed)
+    print(transposed)
+    winner = check_row(transposed)
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
@@ -37,31 +37,34 @@ def check_win(board):
         The winner's token ( x or o ) if there is one, otherwise None
     """
     return winner
-    return None
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
-# after your program is working you can try chaning the code below. 
+# after your program is working you can try chaning the code below.
+
 
 class TicTacToe:
     """A Simple Tic Tac Toe game"""
 
     app = None
-    board = None # The storage for user's markers
-    buttons = None # Holds UI elements for the board
-    board_pane = None #
+    board = None  # The storage for user's markers
+    buttons = None  # Holds UI elements for the board
+    board_pane = None
     message = None
     turn_n = 0
     turn = X_MARK
 
     def __init__(self, win_func=check_win):
-        self.board = None # The stoage for user's markers
-        
-        self.app = App('Tic Tac Toe Game', bg='burlywood')
-        self.board_pane = Box(self.app, layout='grid') # Holds UI elements for the board     
-        self.message = Text(self.app, text="It is your turn, " + self.current_turn)
+        self.board = None  # The stoage for user's markers
 
-        self.reset_button = PushButton(self.app, text='Reset', command=self.reset)
+        self.app = App('Tic Tac Toe Game', bg='burlywood')
+        # Holds UI elements for the board
+        self.board_pane = Box(self.app, layout='grid')
+        self.message = Text(
+            self.app, text="It is your turn, " + self.current_turn)
+
+        self.reset_button = PushButton(
+            self.app, text='Reset', command=self.reset)
 
         self.message.text_color = "green"
 
@@ -74,14 +77,14 @@ class TicTacToe:
         self.turn_n = 0
         self.turn = X_MARK
         self.message.value = "It's your turn, " + self.current_turn
-        
-        self.board   = [[None for _ in range(3)] for _ in range(3)]
+
+        self.board = [[None for _ in range(3)] for _ in range(3)]
         self.buttons = [[None for _ in range(3)] for _ in range(3)]
 
         # generate a 3x3 grid
         for x in range(3):
             for y in range(3):
-                self.buttons[x][y] = PushButton(self.board_pane, text='', grid=[x, y], width=3, command=self.do_turn, args=[x,y])
+                self.buttons[x][y] = PushButton(self.board_pane, text='', grid=[x, y], width=3, command=self.do_turn, args=[x, y])
 
     def start(self):
         """Start the game"""
@@ -105,13 +108,14 @@ class TicTacToe:
 
         if winner:
             self.message.value = f"Player {winner} won!"
-            info("Tic-tac-toe",f"Player {winner} won!")
+            info("Tic-tac-toe", f"Player {winner} won!")
             for row in self.buttons:
                 for button in row:
                     button.disable()
         elif self.turn_n == 9:
             self.message.value = "It's a draw!"
-            info("Tic-tac-toe","It's a draw!")
+            info("Tic-tac-toe", "It's a draw!")
+
 
 ttt = TicTacToe(check_win)
 ttt.start()
