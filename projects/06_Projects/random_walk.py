@@ -38,10 +38,18 @@ steps (int): The number of steps to take
 
 """
 angle = ([0, 90, 180, 270])
-for tregjfdjl in range:
+while True:
+    colors = (['red', 'orange', 'green', 'blue', 'purple'])
+    randnumbcolor = random.randint(0,4)
     walter.forward(69)
-    rand_angle = random.randint(0,4)
-    walter.right(angle=angle[rand_angle])
+    angle = random.choice([0, 90, 180, 270])
+    walter.right(angle=angle)
+    w = random.randint(0,20)
+    walter.pencolor(colors[randnumbcolor])
+    if w == 1:
+        walter.penup()
+        walter.goto(0,0)
+        walter.pendown()
 # You can make the turle move randomly in either of two ways: randomly choosing a direction
 # or randomly choosing a angle to turn. You can use random.choice() to select a random element
 # from a list, like this: 

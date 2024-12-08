@@ -9,9 +9,11 @@ window.withdraw()  # ;
 # 1. Ask the user if they know how to write code.
 response = simpledialog.askstring(None, prompt="Do you know how to code?")  # ;
 
-# 2. If they say "yes", tell them they will rule the world in a message box pop-up.
+# 2. If they say "yes", tell them they will rule the world in a message box pop-yeup.
 if response == "yes":  # ;
-    messagebox.showinfo(message="You will rule the world!")  # ;
+    messagebox.showinfo(message="You will rule the world!")
+if response == "ye":  # ;
+    messagebox.showinfo(message="You will rule the world!")    # ;
 else:  # ;
     # 3. Otherwise, tell them to sign up for classes at The League in an error box pop-up.
     messagebox.showerror(message="You need to sign up for classes at The League!")  # ;

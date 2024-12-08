@@ -7,11 +7,11 @@ window.withdraw()
 
 # Ask the user for the radius in pixels and store it in a variable
 # simpledialog.askinteger()
-radius = simpledialog.askinteger(None, "enter a radius")  # ;
+radius = simpledialog.askinteger(None, "enter a radius")  # ;1
 
 # Make a new turtle
 my_turtle = turtle.Turtle()  # ;
-
+my_turtle.speed(0)
 # Have your turtle draw a circle with the correct radius
 # my_turtle.circle()
 my_turtle.circle(radius=radius, extent=360, steps=50)  # ;
@@ -19,7 +19,7 @@ my_turtle.circle(radius=radius, extent=360, steps=50)  # ;
 # Call the turtle .penup() method
 my_turtle.penup()  # ;
 
-# Move your turtle to a new x,y position using .goto()
+# Move your turtle to a new x,y position using .goto()1
 my_turtle.goto(0, 0)  # ;
 
 # Calculate the area of your circle and store it in a variable, you can use math.pi

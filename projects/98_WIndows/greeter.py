@@ -13,7 +13,7 @@ name = simpledialog.askstring(title="Question", prompt="What is your name?")  # 
 # Show a message box with your message using the .showinfo() method
 messagebox.showinfo(message="Hello " + name + "!!!")  # ;
 
-# Print your message to the console using the print() function
+# Print your message to the console using the print() functionmatu
 print("Hello " + name + "!!!!")  # ;
 
 # Optional: show an error message using messagebox.showerror()

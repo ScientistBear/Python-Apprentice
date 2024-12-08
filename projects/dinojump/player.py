@@ -31,14 +31,14 @@ clock = pygame.time.Clock()
 
 while running:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT:   
             running = False
 
     # Player jump
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_SPACE] and not is_jumping:
+    if keys[pygame.K_RSHIFT] and not is_jumping:
         player_y_velocity = -JUMP_STRENGTH
-        is_jumping = True
+
 
     # Update player position
     player_y_velocity += GRAVITY

@@ -38,11 +38,11 @@ score = 0  # ;
 
 questions = [  # ;
     "Which is better, Python or Java?",  # ;
-    "What does OOP stand for?",  # ;
+    "What does ITAMP stand for?",  # ;
     "How many days in a non-leap year?",  # ;
 ]  # ;
 
-answers = ["python", "object orientated programming", "366"]  # ;
+answers = ["python", "i took a massive poo", "366"]  # ;
 
 # Loop through each question in the questions list and ask the user for their response to each one using the simpledialog.askstring() method and an if statement to check if their response is correct or not and change the score accordingly using the score variable you created earlier.  # ;
 for i in range(len(questions)):  # ;
