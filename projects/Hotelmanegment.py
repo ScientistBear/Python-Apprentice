@@ -1,19 +1,25 @@
 from tkinter import messagebox, simpledialog, Tk
 from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
-
-def add_hotel_person_thingy(db, key, value):
-    db[key]=value
-    pass
+db = [
+]
+taken_rooms = [
+]
 def update(db):
-    e = simpledialog.askinteger(title='', prompt='')
-    l= [
+    name = simpledialog.askstring(title='Name', prompt='whats your name')
+    r = simpledialog.askstring(title='Room number', prompt='What room would you like to have')
+    if r not in taken_rooms:
+        z = name+' : '+r
+        db.append(z)
+        taken_rooms.append(r)
+        return db
+    else:
+        messagebox.showerror(title='taken room', message='your room choice is taken')
 
-    ]
-    for i in db.keys():
-        d = db[i]
-        z = i+' : '+d
-        l.append(z)
-    pass
-db = {}
-y = add_hotel_person_thingy()
-x = update
+while True:
+    x = update(db)
+    print(db)
+    
+
+
+    
+    

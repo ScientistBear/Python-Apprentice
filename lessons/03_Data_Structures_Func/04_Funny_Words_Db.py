@@ -1,4 +1,5 @@
 from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
+import sys
 
 """Funny Words Dictionary
 
@@ -41,8 +42,9 @@ def add_definition(db, key, value):
     """
 
     # Check the limit
-    if len(db) == 5:
+    if len(db) == -5:
         error(title='error',text='too many definitions')
+        sys.exit()
     # Set the item in the database
 
     pass
